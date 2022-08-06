@@ -1,0 +1,24 @@
+doctype html
+html lang="en" 
+  head
+    meta charset="UTF-8" /
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    script crossorigin="anonymous" src="https://kit.fontawesome.com/42d5adcbca.js" 
+    link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" /
+    
+    / == assets([:css, :nucleo_icons])
+    / == assets([:css, :nucleo_svg])
+    / == assets([:css, :soft_ui])
+    title TrackIt
+    == assets([:js, :popper], defer: true)
+    == assets([:js, :core], defer: true)
+    == assets([:js, :core1], defer: true)
+    == assets([:js, :soft], defer: true)
+    == assets([:js, :soft1], defer: true)
+    == assets([:js, :soft2], defer: true)
+
+  body
+    == yield
+    / section.footer
+    /     | ©CopyRight 2022 - ETA

@@ -1,0 +1,37 @@
+html.h-100 lang="en" 
+  head
+    meta charset="utf-8" /
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    meta content="" name="description" /
+    title TrackIt
+    == assets([:css, :cover])
+    == assets([:css, :boot])
+    == assets([:js, :popper], defer: true)
+    == assets([:js, :core1], defer: true)
+    /! Custom styles for this template
+  - unless current_account
+    body.d-flex.h-100.text-center.text-bg-dark
+      .cover-container.d-flex.w-100.h-100.p-3.mx-auto.flex-column
+        header.mb-auto
+          div
+            h3.float-md-start.mb-0 TrackIt
+            nav.nav.nav-masthead.justify-content-center.float-md-end
+              a.nav-link.fw-bold.py-1.px-0.active aria-current="page" href="/"  Home
+              a.nav-link.fw-bold.py-1.px-0 href="#"  Sign in 
+              a.nav-link.fw-bold.py-1.px-0 href="#"  Register
+        main.px-3
+          h1 TrackIt, your issues resolved
+          p.lead
+            | TrackIt is a platform that will allow users 
+            | text, and add your own fullscreen background photo to make it your own.
+          p.lead
+            a.btn.btn-lg.btn-secondary.fw-bold.border-white.bg-dark href="/auth/login"  SIGN IN
+        footer.mt-auto.text-white-50
+         p.mb-0.text-secondary
+            | Copyright ©
+            javascript:
+              | document.write(new Date().getFullYear())
+            | Thierry Marcelin
+    - if current_account 
+      | SKKrr
+
