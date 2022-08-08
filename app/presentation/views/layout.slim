@@ -19,6 +19,7 @@ html lang="en"
     == assets([:js, :soft2], defer: true)
 
   body
+    == render :flash_bar
     == yield
     / section.footer
     /     | ©CopyRight 2022 - ETA

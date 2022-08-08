@@ -17,7 +17,6 @@ module TrackIt
 
         # POST /auth/login
         routing.post do
-          binding.pry
           account = AuthenticateAccount.new(App.config).call(
             username: routing.params['username'],
             password: routing.params['password']

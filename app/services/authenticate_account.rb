@@ -11,7 +11,7 @@ module TrackIt
       @config = config
     end
 
-    def self.call(username:, password:)
+    def call(username:, password:)
       response = HTTP.post("#{@config.API_URL}/auth/authenticate",
                            json: { username:, password: })
 

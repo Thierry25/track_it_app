@@ -29,7 +29,8 @@ module TrackIt
     plugin :multi_route
     plugin :flash
 
-    ONE_MONTH = 30 * 24 * 60 * 60
+    # ONE_MONTH = 30 * 24 * 60 * 60
+    ONE_MONTH = 10
 
     use Rack::Session::Cookie,
         expire_after: ONE_MONTH,
