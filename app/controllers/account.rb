@@ -8,6 +8,8 @@ module TrackIt
   class App < Roda
     route('account') do |routing|
       routing.on do
+        routing.public
+
         # GET /account/login
         routing.get String do |username|
           if @current_account && @current_account['username'] == username

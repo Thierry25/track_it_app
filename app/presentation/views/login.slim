@@ -25,11 +25,12 @@ javascript:
 == assets([:css, :nucleo_icons])
 == assets([:css, :nucleo_svg])
 == assets([:css, :soft_ui])
+== assets([:css, :social])
 == assets([:js, :popper], defer: true)
 == assets([:js, :core], defer: true)
 == assets([:js, :core1], defer: true)
 == assets([:js, :soft], defer: true)
-== assets([:js, :soft1], defer: true)
+/ == assets([:js, :soft1], defer: true)
 == assets([:js, :soft2], defer: true)
 main.main-content.mt-0
   section
@@ -51,6 +52,10 @@ main.main-content.mt-0
                     input.form-control aria-describedby="password-addon" name='password' aria-label="Password" placeholder="Password" type="password" /
                   .text-center
                     button.btn.bg-gradient-info.w-100.mt-4.mb-0 type="submit"  Sign in
+                  .text-center
+                    a.btn.btn-block.btn-social.btn-google.w-100.mt-4.mb-0.text-center
+                      span.fa.fa-google
+                      | Sign in with Google
               .card-footer.text-center.pt-0.px-lg-2.px-1
                 p.mb-4.text-sm.mx-auto
                   | Don't have an account?
@@ -72,5 +77,4 @@ footer.footer.py-5
     /! Github buttons
 script async="" defer="" src="https://buttons.github.io/buttons.js" 
     /! Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc
-script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.6" 
 
