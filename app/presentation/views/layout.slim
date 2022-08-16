@@ -21,5 +21,27 @@ html lang="en"
   body
     == render :flash_bar
     == yield
-    / section.footer
-    /     | ©CopyRight 2022 - ETA
+    footer.footer.py-5
+      .container
+        .row
+          .col-lg-8.mb-4.mx-auto.text-center
+            a.text-secondary.me-xl-5.me-3.mb-sm-0.mb-2 href="javascript:;" target="_blank" 
+              | About Us
+            a.text-secondary.me-xl-5.me-3.mb-sm-0.mb-2 href="javascript:;" target="_blank" 
+              | Team
+            a.text-secondary.me-xl-5.me-3.mb-sm-0.mb-2 href="javascript:;" target="_blank" 
+              | Products
+          .col-lg-8.mx-auto.text-center.mb-4.mt-2
+            a.text-secondary.me-xl-4.me-4 href="https://twitter.com/marcelinthierr2" target="_blank" 
+              span.text-lg.fab.fa-twitter
+            a.text-secondary.me-xl-4.me-4 href="https://www.instagram.com/thierrymarcelin/" target="_blank" 
+              span.text-lg.fab.fa-instagram
+            a.text-secondary.me-xl-4.me-4 href="https://github.com/Thierry25" target="_blank" 
+              span.text-lg.fab.fa-github
+        .row
+          .col-8.mx-auto.text-center.mt-1
+            p.mb-0.text-secondary
+              | Copyright ©
+              javascript:
+                | document.write(new Date().getFullYear())
+              | Thierry Marcelin

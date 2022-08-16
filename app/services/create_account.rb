@@ -11,12 +11,19 @@ module TrackIt
       @config = config
     end
 
-    def call(first_name:, last_name:, username:, email:, password:)
-      message = { first_name:,
+    def call(username:, first_name:, last_name:, email:, password:, picture:, biography:, linkedin:, twitter:,
+             instagram:, youtube:)
+      message = { username:,
+                  first_name:,
                   last_name:,
-                  username:,
                   email:,
-                  password: }
+                  password:,
+                  picture:,
+                  biography:,
+                  linkedin:,
+                  twitter:,
+                  instagram:,
+                  youtube: }
 
       response = HTTP.post(
         "#{@config.API_URL}/accounts/",
@@ -27,17 +34,3 @@ module TrackIt
     end
   end
 end
-
-# def call(username:, first_name:, last_name:, email:, password:, picture:, biography:, linkedin:, twitter:,
-#          instagram:, youtube:)
-#   message = { username:,
-#               first_name:,
-#               last_name:,
-#               email:,
-#               password:,
-#               picture:,
-#               biography:,
-#               linkedin:,
-#               twitter:,
-#               instagram:,
-#               youtube: }
