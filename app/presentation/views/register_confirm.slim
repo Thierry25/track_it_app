@@ -29,7 +29,6 @@ html lang="en"
     link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" /
     script crossorigin="anonymous" src="https://kit.fontawesome.com/42d5adcbca.js" 
   body
-    == render :flash_bar
     nav.navbar.navbar-expand-lg.position-absolute.top-0.z-index-3.w-100.shadow-none.my-3.navbar-transparent.mt-4
       .container
         a.navbar-brand.font-weight-bolder.ms-lg-0.ms-3.text-white href="/" style=("font-size: 22px;") 
@@ -53,19 +52,19 @@ html lang="en"
                 .card-header.text-center.pt-4
                   h4 Account Information
                 .card-body
-                  form role=("form text-left") 
+                  form action="/account/#{registration_token}" method='post' role=("form text-left") 
                     .mb-3
-                      input.form-control aria-describedby="username-addon" aria-label="Username" name="username" placeholder="Username*" type="text" /
+                      input.form-control aria-describedby="username-addon" aria-label="Username" name="username" disabled="" value="#{new_account['username']}" /
                     .mb-3
-                      input.form-control aria-describedby="firstname-addon" aria-label=("First Name") name="firstname" placeholder=("First Name*") type="text" /
+                      input.form-control aria-describedby="firstname-addon" aria-label=("First Name") name="firstname" disabled="" value="#{new_account['first_name']}"  /
                     .mb-3
-                      input.form-control aria-describedby="lastname-addon" aria-label=("Last Name") name="lastname" placeholder=("Last Name*") type="text" /
+                      input.form-control aria-describedby="lastname-addon" aria-label=("Last Name") name="lastname" disabled="" value="#{new_account['last_name']}" /
                     .mb-3
-                      input.form-control aria-describedby="email-addon" aria-label="Email" name="email" placeholder="Email*" type="email" /
+                      input.form-control aria-describedby="email-addon" aria-label="Email" name="email" disabled="" value="#{new_account['email']}" type="email" /
                     .mb-3
-                      input.form-control aria-describedby="password-addon" aria-label="Password" placeholder="Password*" type="password" /
+                      input.form-control aria-describedby="password-addon" aria-label="Password" name="password" placeholder="Password*" type="password" /
                     .mb-3
-                      input.form-control aria-describedby="password-addon" aria-label="Password" name="password-confirm" placeholder=("Re-enter Password*") type="password" /
+                      input.form-control aria-describedby="password-addon" aria-label="Password" name="password_confirm" placeholder=("Re-enter Password*") type="password" /
                     .mb-3
                       input.form-control aria-describedby="picture-addon" aria-label="Picture" name="picture" placeholder="Picture, a link to an online picture" type="text" /
                     .mb-3
@@ -106,7 +105,7 @@ html lang="en"
                 | Copyright ©
                 javascript:
                   | document.write(new Date().getFullYear())
-                | Soft by Thierry
+                | Thierry Marcelin
     script src="../assets/js/core/popper.min.js" 
     script src="../assets/js/core/bootstrap.min.js" 
     script src="../assets/js/plugins/perfect-scrollbar.min.js" 

@@ -1,0 +1,15 @@
+{
+  "type": "authenticated_account",
+  "attributes": {
+    "account": {
+      "type": "account",
+      "attributes": {
+        "first_name": "Daniel Thierry",
+        "last_name": "Marcelin",
+        "username": "daniel.marcelin",
+        "email": "marcelinthierry@gmail.com"
+      }
+    },
+    "auth_token": "-rHi3blFqW2f5JBf38nR4i_PJCiLmpsod9FE0Xz4qNvNkCyVNmvStLwyZRXmFtcpjEQOpPNVuUUIKc3ELtfeSW12H4aAy4KLE9Sjtpyt8QI_jG8PNQZubKUsvbHN5sbg7AG5dpB3Cg2ZWZS20HIgXkfOUZ9gU1IEcprIEysMxhjtmhizJJvSuoI1PSDD0ZA-9xV4l3qeZRrpgZWvcfj5z6Kf7RK0eVZ5BRtyz2sW-1cFv-dXIV9dycQNt5EicQwfYPf1qrwS7PPxPcaOLBY142Ze4C9x9PC1F-hvdfSZj9b5GAqXEiMCNLThXnudDpnUd4PppZEcA4BOjk5dhs7thM7J9ZGVeTttrWPO9v3qnEGZZjy5aFl4Cx9xfEJMM2_m-iz6b6UcjB_HpuVOfn2CAOsL_-jPUlWZu6EariVA3EOTXNkMphHmI2UhJaFg5wfSl3dI-xusWA02kXnMoeW_Nx_bQ-iy6WJp7FEkoGnXP-xpGHTqlW_80KetX7ku6UYmmgEpKFQyYXAFXcdOmHsWNW2yXHmZxs3mb0UaDJgJbuoDrKMZfUOea87HbbsQ4-qRj6ZvRP4Z7GRdNeIJgbtufzP7pFqVM--FHfBDVKtiRT7v7vozD-qvzBteZOigClT-rHuCm4i8SpJmRYFxed1f0amDcG1VHzEkMdmByeJU_Y5sxEjsJgCz5TOXF0_RCR6_D5Qu9RUKV-OGuQdAWRIUVnp-6YPeRYFTbK6MFZnNWeLQaA21gQKRc9co_tPb3iZhkEjP8tcCConvrgz5VgMVMQHnEEiZVJyf6Pl59P2IA3ewyvmzh_p9vu6D1maaqIvl1-a4IvQG1gpvhhpnmgYtzEbycPvVmUg2i10PeGYdEb7a-z1BlfKELLLOTlOtsiJSpBnZOX-qu6vmmxjpFYWFqfawiBhZlvow-oOp08pjj7Md8MChb7aZ_x9QGFEpjlgl7xy_xt_Q1vXRlqt8SHRVL3TWHDzXkxhuUKeRy9Wl9AqGiLzuuatjxeLTrOgo9NoSnNQdxVXK5BK1D0GZCvBbBawgaUljs4bhx6b17jYnjOmU4GO8dgEZythFXXZ1YdLj7krOOZjbDAhRFPs9Pnug-PvCc6PQh_EuFqb_1Ad4F5g8UFJE8rPH8av_PeVTeIPmPGO6Ad33TkLOHmEhmUQRPDyGSVhVeky_XrRQ6iV8kIifR2Ty82JKbyqY9LQOZARMTGDTu4NpyILiBukaTkCunrqEOJ1-iMhejh89Vggez5DoLm1hjQ=="
+  }
+}

@@ -7,9 +7,8 @@ describe 'Test Service Objects' do
   before do
     @credentials = { username: 'daniel.marcelin', password: 'daniel' }
     @mal_credentials = { username: 'daniel.marcelin', password: 'wrongpassword' }
-    @api_account = { attributes:
-                       { first_name: 'Daniel Thierry', last_name: 'Marcelin', email: 'marcelinthierry@gmail.com',
-                         username: 'daniel.marcelin' } }
+    @api_account = { first_name: 'Daniel Thierry', last_name: 'Marcelin', email: 'marcelinthierry@gmail.com',
+                     username: 'daniel.marcelin' }
   end
 
   after do
@@ -18,17 +17,21 @@ describe 'Test Service Objects' do
 
   describe 'Find authenticated account' do
     it 'HAPPY: should find an authenticated account' do
+      auth_account_file = 'spec/fixtures/auth_account.json'
+
+      auth_return_json = File.read(auth_account_file)
       WebMock.stub_request(:post, "#{API_URL}/auth/authenticate")
              .with(body: @credentials.to_json)
-             .to_return(body: @api_account.to_json,
+             .to_return(body: auth_return_json,
                         headers: { 'content-type' => 'application/json' })
 
-      account = TrackIt::AuthenticateAccount.new(app.config).call(**@credentials)
+      auth = TrackIt::AuthenticateAccount.new(app.config).call(**@credentials)
+      account = auth[:account]
       _(account).wont_be_nil
-      _(account['first_name']).must_equal @api_account[:attributes][:first_name]
-      _(account['last_name']).must_equal @api_account[:attributes][:last_name]
-      _(account['username']).must_equal @api_account[:attributes][:username]
-      _(account['email']).must_equal @api_account[:attributes][:email]
+      _(account['first_name']).must_equal @api_account[:first_name]
+      _(account['last_name']).must_equal @api_account[:last_name]
+      _(account['username']).must_equal @api_account[:username]
+      _(account['email']).must_equal @api_account[:email]
     end
 
     it 'BAD: should not find a false authenticated account' do
